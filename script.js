@@ -54,14 +54,14 @@ ctaButton.addEventListener('click', () => {
 
 const courseButtons = document.querySelectorAll('.course-button');
 
-courseButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const courseCard = button.closest('.course-card');
-        const courseTitle = courseCard.querySelector('h3').textContent;
-        alert(`Você selecionou: ${courseTitle}\n\nEm breve mais informações!`);
-    });
-});
+// courseButtons.forEach(button => {
+//     button.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         // const courseCard = button.closest('.course-card');
+//         // const courseTitle = courseCard.querySelector('h3').textContent;
+//         // alert(`Você selecionou: ${courseTitle}\n\nEm breve mais informações!`);
+//     });
+// });
 
 // =====================================
 // MATERIAL CARDS - EFEITO DE CLIQUE
