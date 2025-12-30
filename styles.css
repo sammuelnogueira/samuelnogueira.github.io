@@ -124,7 +124,7 @@ body {
 }
 
 .hamburger span {
-    width: 25px;
+    width: 26px;
     height: 2px;
     background: var(--black);
     transition: var(--transition);
