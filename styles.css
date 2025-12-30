@@ -254,23 +254,36 @@ section h2 {
     gap: 30px;
 }
 
-.stat {
-    text-align: center;
+.qualification-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     padding: 30px;
-    background: var(--light-gray);
+    background: rgba(0, 113, 227, 0.05);
     border-radius: 12px;
+    border: 2px solid rgba(0, 113, 227, 0.1);
+    text-align: center;
+    transition: all var(--transition);
 }
 
-.stat h3 {
-    font-size: 42px;
-    font-weight: 700;
+.qualification-check:hover {
+    background: rgba(0, 113, 227, 0.1);
+    border-color: var(--primary-blue);
+    transform: translateY(-4px);
+}
+
+.qualification-check i {
+    font-size: 36px;
     color: var(--primary-blue);
-    margin-bottom: 10px;
 }
 
-.stat p {
-    color: var(--medium-gray);
-    font-size: 14px;
+.qualification-check p {
+    color: var(--dark-gray);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
 }
 
 /* =====================================
@@ -692,7 +705,6 @@ section h2 {
 }
 
 .social-link {
-    color: var(--primary-blue);
     text-decoration: none;
     font-size: 32px;
     display: flex;
@@ -701,19 +713,36 @@ section h2 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(0, 113, 227, 0.1);
+    background: transparent;
+    filter: none;
     transition: var(--transition);
 }
 
-.social-link:hover {
-    color: var(--white);
-    background: var(--primary-blue);
-    transform: translateY(-4px);
+.social-link i {
+    color: inherit;
 }
 
-/* =====================================
-   FOOTER
-   ===================================== */
+.social-link:hover {
+    transform: translateY(-4px);
+    opacity: 0.8;
+}
+
+/* Cores específicas dos ícones sociais */
+.social-link[title="WhatsApp"] i {
+    color: #25D366;
+}
+
+.social-link[title="Instagram"] i {
+    color: #E1306C;
+}
+
+.social-link[title="LinkedIn"] i {
+    color: #0077B5;
+}
+
+.social-link[title="Youtube"] i {
+    color: #FF0000;
+}
 
 .footer {
     background: var(--black);
@@ -863,11 +892,15 @@ section h2 {
         gap: 15px;
     }
 
-    .stat {
+    .qualification-check {
         padding: 20px;
     }
 
-    .stat h3 {
-        font-size: 32px;
+    .qualification-check i {
+        font-size: 28px;
+    }
+
+    .qualification-check p {
+        font-size: 14px;
     }
 }
